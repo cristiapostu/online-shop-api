@@ -96,6 +96,7 @@ public class ProductServiceIntegrationTests {
     @Test
     public void testGetProducts_whenAllCriteriaProvidedAndMatching_thenReturnFilteredResults(){
         Product createdProduct = createProduct();
+
         GetProductsRequest request = new GetProductsRequest();
         request.setPartialName("top");
         request.setMinimumPrice(9.9);
