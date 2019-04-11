@@ -51,7 +51,7 @@ public class ProductService {
                 request.getMinimumQuantity() != null &&
                 request.getMinimumPrice() != null &&
                 request.getMaximumPrice() != null) {
-            return productRepository.findByPartialNamePriceBetweenAndQuantityGreaterThanEqual(
+            return productRepository.findByNameContainingAndPriceBetweenAndQuantityGreaterThanEqual(
                     request.getPartialName(), request.getMinimumPrice(), request.getMaximumPrice(),
                     request.getMinimumQuantity(), pageable);
         } else if (request.getMinimumPrice() != null &&
