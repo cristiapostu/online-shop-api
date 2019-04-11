@@ -1,4 +1,4 @@
-package org.fasttrackit.onlineshopapi.transfer;
+package org.fasttrackit.onlineshopapi.transfer.product;
 
 public class CreateProductRequest {
 
@@ -41,7 +41,7 @@ public class CreateProductRequest {
 
     @Override
     public String toString() {
-        return "CreateProductRequest{" +
+        return "CreateCustomerRequest{" +
                 "name='" + name + '\'' +
                 ", sku='" + sku + '\'' +
                 ", price=" + price +
