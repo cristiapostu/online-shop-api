@@ -83,7 +83,7 @@ public class ProductServiceIntegrationTests {
 
 //    todo: Implement negative tests for update and tests for update with some fields only
 
-    @Test
+   @Test
     public void testDeleteProduct_whenExistingId_thenProductIsDeleted() throws ResourceNotFoundException {
         Product createdProduct = createProduct();
 
@@ -105,5 +105,7 @@ public class ProductServiceIntegrationTests {
 
         Page<Product> products = productService.getProducts(request, PageRequest.of(0,10));
         assertThat(products.getTotalElements(), greaterThanOrEqualTo (1L));
+
+        // todo: for each product from the response assert that all criteria are matched
     }
 }

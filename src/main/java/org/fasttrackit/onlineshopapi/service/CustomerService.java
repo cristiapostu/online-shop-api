@@ -28,9 +28,9 @@ public class CustomerService {
     }
 
     public Customer createCustomer(CreateCustomerRequest request) {
-        LOGGER.info("Creating product {}", request);
-        Customer product = objectMapper.convertValue(request, Customer.class);
-        return customerRepository.save(product);
+        LOGGER.info("Creating customer {}", request);
+        Customer customer = objectMapper.convertValue(request, Customer.class);
+        return customerRepository.save(customer);
     }
 
     public Customer getCustomer(long id) throws ResourceNotFoundException {
@@ -39,6 +39,7 @@ public class CustomerService {
                 // Optional and lambda expression
                 .orElseThrow(() -> new ResourceNotFoundException("Customer " + id + " not found"));
     }
+    
 
     public Customer updateCustomer(long id, UpdateCustomerRequest request) throws ResourceNotFoundException {
         LOGGER.info("Updating customer {}, {}", id, request);
