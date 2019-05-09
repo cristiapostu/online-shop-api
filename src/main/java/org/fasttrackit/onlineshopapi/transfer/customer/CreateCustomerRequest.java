@@ -2,14 +2,24 @@ package org.fasttrackit.onlineshopapi.transfer.customer;
 
 public class CreateCustomerRequest {
 
+
+    private String firstName;
     private String lastName;
-    private String adress;
+    private String address;
 
     private String email;
     private String phone;
 
     private String username;
     private String password;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
     public String getLastName() {
         return lastName;
@@ -19,12 +29,12 @@ public class CreateCustomerRequest {
         this.lastName = lastName;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
     public String getEmail() {
@@ -63,11 +73,12 @@ public class CreateCustomerRequest {
     public String toString() {
         return "CreateCustomerRequest{" +
                 "lastName='" + lastName + '\'' +
-                ", adress='" + adress + '\'' +
+                ", adress='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", username='" + username + '\'' +
                 ", password=**********" +
                 '}';
     }
+
 }
